@@ -18,7 +18,30 @@ class RegViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addAccessibilityIds()
+        self.initRegButton()
+        self.initDelegates()
         
+    }
+    
+    private func initRegButton() {
+        self.registerButton.addTarget(self, action: #selector(regButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc
+    private func regButtonTapped() {
+        self.showIndicator()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
+            self?.hideIndicator()
+            self?.showAlert(with: "Reg success", completition: { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            })
+        }
+    }
+    
+    private func initDelegates() {
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
     }
     
     private func addAccessibilityIds() {

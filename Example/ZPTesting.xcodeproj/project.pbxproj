@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5407A071235652E500A3D2DF /* UIViewController+Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407A070235652E500A3D2DF /* UIViewController+Indicator.swift */; };
 		541906532355131E00C2EBC7 /* ZPTesting_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541906522355131E00C2EBC7 /* ZPTesting_ExampleUITests.swift */; };
 		5419065E23551AA300C2EBC7 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419065D23551AA300C2EBC7 /* RegViewController.swift */; };
 		5419066023551AC400C2EBC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419065F23551AC400C2EBC7 /* LoginViewController.swift */; };
@@ -44,6 +45,7 @@
 		3A336D116208C946DF34C48B /* Pods-ZPTesting_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPTesting_Example.release.xcconfig"; path = "Target Support Files/Pods-ZPTesting_Example/Pods-ZPTesting_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3D6B04BDA9464A8E082C2837 /* Pods_ZPTesting_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZPTesting_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6EB34C9773F29A3A4059F7 /* Pods_ZPTesting_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZPTesting_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5407A070235652E500A3D2DF /* UIViewController+Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Indicator.swift"; sourceTree = "<group>"; };
 		541906502355131D00C2EBC7 /* ZPTesting_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZPTesting_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		541906522355131E00C2EBC7 /* ZPTesting_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPTesting_ExampleUITests.swift; sourceTree = "<group>"; };
 		541906542355131E00C2EBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				54E4804F23564BF600161CE1 /* AccessibilityIds.swift */,
+				5407A070235652E500A3D2DF /* UIViewController+Indicator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5419066023551AC400C2EBC7 /* LoginViewController.swift in Sources */,
+				5407A071235652E500A3D2DF /* UIViewController+Indicator.swift in Sources */,
 				54E4805023564BF600161CE1 /* AccessibilityIds.swift in Sources */,
 				5419065E23551AA300C2EBC7 /* RegViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

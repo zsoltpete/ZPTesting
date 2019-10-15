@@ -30,4 +30,27 @@ extension BaseXCTestCase {
         return element
     }
     
+    /**
+     ZPTesting: Wait for predicate success
+     - parameter rawPredicate: Predicate which will be checked
+     - parameter element: Element which will be checked
+     - parameter timeout: Time which iis the max waiting time to predicate checking
+     */
+    open func wait(for rawPredicate: String, element: XCUIElement, timeout: Double) {
+        let predicate = NSPredicate(format: rawPredicate)
+        expectation(for: predicate, evaluatedWith: element, handler: nil)
+        waitForExpectations(timeout: timeout, handler: nil)
+    }
+    
+    /**
+    ZPTesting: Wait for existence of element success
+    - parameter element: Element which will be checked
+    - parameter timeout: Time which iis the max waiting time to existence checking
+    */
+    open func waitExistence(of element: XCUIElement, timeout: Double) {
+        let predicate = NSPredicate(format: "exists == 1")
+        expectation(for: predicate, evaluatedWith: element, handler: nil)
+        waitForExpectations(timeout: timeout, handler: nil)
+    }
+    
 }

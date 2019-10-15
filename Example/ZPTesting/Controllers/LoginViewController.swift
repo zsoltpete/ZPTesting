@@ -18,6 +18,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addAccessibilityIds()
+        self.initDelegates()
+    }
+    
+    private func initDelegates() {
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     private func addAccessibilityIds() {

@@ -24,8 +24,18 @@ class ZPTesting_ExampleUITests: BaseXCTestCase {
         self.tapElement(AccessibilityIds.Login.RegisterButton, type: .button)
         let emailField = self.letElement(AccessibilityIds.Registration.EmailInputField, type: .inputField)
         self.write(in: emailField, text: "petezetep@gmail.com")
-        self.write(in: AccessibilityIds.Registration.PasswordInputField, type: .inputField, text: "asd")
-        self.write(in: AccessibilityIds.Registration.ConfiemPasswordInputField, type: .inputField, text: "asd")
+        self.write(in: AccessibilityIds.Registration.PasswordInputField, type: .secureInputField, text: "asd")
+        self.write(in: AccessibilityIds.Registration.ConfiemPasswordInputField, type: .secureInputField, text: "asd\n")
         self.tapElement(AccessibilityIds.Registration.RegisterButton, type: .button)
+        
+        let okButton = app.buttons["OK"]
+        self.waitExistence(of: okButton, timeout: 5)
+        okButton.tap()
     }
+}
+
+extension BaseXCTestCase {
+    
+    
+    
 }
