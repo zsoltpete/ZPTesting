@@ -1,14 +1,14 @@
 use_frameworks!
-
+ platform :ios, '11.0'
 target 'ZPTesting_Example' do
-  pod 'ZPTesting', :path => '../'
 
   target 'ZPTesting_Tests' do
-    inherit! :search_paths
-
-    pod 'Quick', '~> 1.2.0'
-    pod 'Nimble', '~> 7.0'
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-    pod 'Nimble-Snapshots' , '~> 6.3.0'
+    	inherit! :search_paths
   end
+
+end
+
+target 'ZPTesting_ExampleUITests' do
+  inherit! :search_paths
+	pod 'ZPTesting', :path => '../'
 end

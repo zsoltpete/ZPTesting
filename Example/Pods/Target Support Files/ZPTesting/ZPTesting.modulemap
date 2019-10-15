@@ -1,0 +1,6 @@
+framework module ZPTesting {
+  umbrella header "ZPTesting-umbrella.h"
+
+  export *
+  module * { export * }
+}
