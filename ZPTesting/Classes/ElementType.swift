@@ -22,3 +22,10 @@ public enum ElementType {
     case alert
     case view
 }
+
+public enum SwipeDirection {
+    case up
+    case down
+    case right
+    case left
+}

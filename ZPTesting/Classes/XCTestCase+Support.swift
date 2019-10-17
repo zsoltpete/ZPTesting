@@ -53,4 +53,11 @@ extension BaseXCTestCase {
         waitForExpectations(timeout: timeout, handler: nil)
     }
     
+    /**
+     ZPTesting: Pop navigation controller.
+     */
+    open func goBack() {
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+    }
+    
 }

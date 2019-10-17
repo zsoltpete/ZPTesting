@@ -177,4 +177,33 @@ extension BaseXCTestCase {
         return self.isExists(element)
     }
     
+    /**
+     Let cell at index
+     - parameter bound: Index of cell
+     - parameter table: Table of the cell
+     - returns: Cell of the table
+     */
+    open func letCell(at bound: Int, table: XCUIElement? = nil) -> XCUIElement {
+        if let table = table {
+            return table.cells.element(boundBy: bound)
+        } else {
+            return app.cells.element(boundBy: bound)
+        }
+    }
+    
+    /**
+    Let cell at index
+    - parameter bound: Index of cell
+    - parameter tableId: Table id which contains the cell
+    - returns: Cell of the table
+    */
+    open func letCell(at bound: Int, tableId: String? = nil) -> XCUIElement {
+        if let tableId = tableId {
+            let table = self.letTableView(tableId)
+            return table.cells.element(boundBy: bound)
+        } else {
+            return app.cells.element(boundBy: bound)
+        }
+    }
+    
 }

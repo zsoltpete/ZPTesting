@@ -11,6 +11,10 @@
 		541906532355131E00C2EBC7 /* ZPTesting_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541906522355131E00C2EBC7 /* ZPTesting_ExampleUITests.swift */; };
 		5419065E23551AA300C2EBC7 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419065D23551AA300C2EBC7 /* RegViewController.swift */; };
 		5419066023551AC400C2EBC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419065F23551AC400C2EBC7 /* LoginViewController.swift */; };
+		544F46382357900A00BC56BD /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544F46362357900A00BC56BD /* ItemCell.swift */; };
+		544F46392357900A00BC56BD /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544F46372357900A00BC56BD /* ItemCell.xib */; };
+		544F463B2357914300BC56BD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544F463A2357914300BC56BD /* ListViewController.swift */; };
+		544F463D2357918200BC56BD /* UIViewController+RegisterNibs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544F463C2357918200BC56BD /* UIViewController+RegisterNibs.swift */; };
 		54E4805023564BF600161CE1 /* AccessibilityIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4804F23564BF600161CE1 /* AccessibilityIds.swift */; };
 		54E4805123564CD700161CE1 /* AccessibilityIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4804F23564BF600161CE1 /* AccessibilityIds.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -51,6 +55,10 @@
 		541906542355131E00C2EBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5419065D23551AA300C2EBC7 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		5419065F23551AC400C2EBC7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		544F46362357900A00BC56BD /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		544F46372357900A00BC56BD /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		544F463A2357914300BC56BD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		544F463C2357918200BC56BD /* UIViewController+RegisterNibs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RegisterNibs.swift"; sourceTree = "<group>"; };
 		54D9FDBD27785938C0181191 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		54E4804F23564BF600161CE1 /* AccessibilityIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIds.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZPTesting_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPTesting_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +119,18 @@
 			children = (
 				5419065D23551AA300C2EBC7 /* RegViewController.swift */,
 				5419065F23551AC400C2EBC7 /* LoginViewController.swift */,
+				544F463A2357914300BC56BD /* ListViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		544F463523578FE900BC56BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				544F46362357900A00BC56BD /* ItemCell.swift */,
+				544F46372357900A00BC56BD /* ItemCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		54E4804C23564BCF00161CE1 /* Utilities */ = {
@@ -120,6 +138,7 @@
 			children = (
 				54E4804F23564BF600161CE1 /* AccessibilityIds.swift */,
 				5407A070235652E500A3D2DF /* UIViewController+Indicator.swift */,
+				544F463C2357918200BC56BD /* UIViewController+RegisterNibs.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -160,6 +179,7 @@
 		607FACD21AFB9204008FA782 /* Example for ZPTesting */ = {
 			isa = PBXGroup;
 			children = (
+				544F463523578FE900BC56BD /* Views */,
 				54E4804C23564BCF00161CE1 /* Utilities */,
 				5419065C23551A6500C2EBC7 /* Controllers */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -341,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544F46392357900A00BC56BD /* ItemCell.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -459,9 +480,12 @@
 			files = (
 				5419066023551AC400C2EBC7 /* LoginViewController.swift in Sources */,
 				5407A071235652E500A3D2DF /* UIViewController+Indicator.swift in Sources */,
+				544F46382357900A00BC56BD /* ItemCell.swift in Sources */,
 				54E4805023564BF600161CE1 /* AccessibilityIds.swift in Sources */,
 				5419065E23551AA300C2EBC7 /* RegViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				544F463B2357914300BC56BD /* ListViewController.swift in Sources */,
+				544F463D2357918200BC56BD /* UIViewController+RegisterNibs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

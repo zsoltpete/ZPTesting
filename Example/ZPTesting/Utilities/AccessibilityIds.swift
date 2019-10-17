@@ -24,4 +24,10 @@ struct AccessibilityIds {
         static let PasswordInputField = "PasswordInputField"
     }
     
+    struct List {
+        static let ListItemTitle = "ListItemTitle"
+        static let ListItemButton = "ListItemButton"
+        static let ListTableView = "ListTableView"
+    }
+    
 }

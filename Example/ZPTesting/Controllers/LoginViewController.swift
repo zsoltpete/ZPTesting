@@ -19,11 +19,22 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.addAccessibilityIds()
         self.initDelegates()
+        self.initLoginButton()
     }
     
     private func initDelegates() {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
+    }
+    
+    private func initLoginButton() {
+        self.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc
+    private func loginButtonTapped() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListViewController")
+        AppDelegate.shared.window?.rootViewController = vc
     }
     
     private func addAccessibilityIds() {
