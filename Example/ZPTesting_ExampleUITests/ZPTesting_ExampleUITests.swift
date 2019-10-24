@@ -33,6 +33,10 @@ class ZPTesting_ExampleUITests: BaseXCTestCase {
         self.goBack()
     }
     
+    func testTabbar() {
+        self.tapTabbarItem(6)
+    }
+    
     func testExample() {
         self.tapElement(AccessibilityIds.Login.RegisterButton, type: .button)
         let emailField = self.letElement(AccessibilityIds.Registration.EmailInputField, type: .inputField)
