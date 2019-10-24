@@ -60,4 +60,12 @@ extension BaseXCTestCase {
         app.navigationBars.buttons.element(boundBy: 0).tap()
     }
     
+    /**
+     ZPTesting: Tap on specific index of tabbar item
+     - parameter index: Index of tabbar item
+     */
+    open func tapTabbarItem(_ index: Int) {
+        app.tabBars.firstMatch.buttons.element(boundBy: index).tap()
+    }
+    
 }

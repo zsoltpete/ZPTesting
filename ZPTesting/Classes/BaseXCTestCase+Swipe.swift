@@ -11,7 +11,7 @@ import XCTest
 extension BaseXCTestCase {
     
     /**
-     Scroll specific element with a direction
+     ZPTesting: Scroll specific element with a direction
      - parameter element: Element which will be scrolled
      - parameter direction: The direction which will be created on the element
      */
@@ -29,11 +29,11 @@ extension BaseXCTestCase {
     }
     
     /**
-    Scroll specific element with a direction
-    - parameter elementId: Element id which will be scrolled
+     ZPTesting: Scroll specific element with a direction
+     - parameter elementId: Element id which will be scrolled
      - parameter type: The type of the element
-    - parameter direction: The direction which will be created on the element
-    */
+     - parameter direction: The direction which will be created on the element
+     */
     open func scroll(_ elementId: String, type: ElementType, direction: SwipeDirection) {
         let element = self.letElement(elementId, type: type)
         self.scroll(element, direction: direction)

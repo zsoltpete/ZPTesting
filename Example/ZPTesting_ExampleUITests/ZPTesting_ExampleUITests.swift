@@ -42,7 +42,7 @@ class ZPTesting_ExampleUITests: BaseXCTestCase {
         self.tapElement(AccessibilityIds.Registration.RegisterButton, type: .button)
         
         let okButton = app.buttons["OK"]
-        self.waitExistence(of: okButton, timeout: 1)
+        self.waitExistence(of: okButton, timeout: 5)
         okButton.tap()
     }
 }
