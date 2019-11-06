@@ -65,7 +65,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "54E3A8082354BB6500B4EA42"
+               BlueprintIdentifier = "5419064F2355131D00C2EBC7"
                BuildableName = "ZPTesting_ExampleUITests.xctest"
                BlueprintName = "ZPTesting_ExampleUITests"
                ReferencedContainer = "container:ZPTesting.xcodeproj">
