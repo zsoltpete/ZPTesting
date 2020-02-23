@@ -21,4 +21,10 @@ open class BaseXCTestCase: XCTestCase, AppHolding {
         super.tearDown()
     }
     
+    open func setUp(with args: [String] = []) {
+        super.setUp()
+        app.launchArguments = args
+        app.launch()
+    }
+    
 }
